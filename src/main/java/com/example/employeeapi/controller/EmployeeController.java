@@ -3,23 +3,23 @@ package com.example.employeeapi.controller;
 import com.example.employeeapi.datasource.EmployeeRepository;
 import com.example.employeeapi.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@EnableAutoConfiguration
+@RequestMapping(value = "/employees")
 public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @GetMapping("/employee")
+    @GetMapping()
     ResponseEntity getEmployees() {
         List<Employee> employees = employeeRepository.getAllEmployees();
 
@@ -30,7 +30,7 @@ public class EmployeeController {
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
 
-    @GetMapping("/employee/{id}")
+    @GetMapping("/{id}")
     ResponseEntity getEmployee(@PathVariable("id") int id) {
         Employee employee = employeeRepository.getEmployee(id);
 
