@@ -1,6 +1,6 @@
-package com.example.employeeapi.datasource;
+package com.example.employee.datasource;
 
-import com.example.employeeapi.model.Employee;
+import com.example.employee.entity.Employee;
 
 import java.util.List;
 

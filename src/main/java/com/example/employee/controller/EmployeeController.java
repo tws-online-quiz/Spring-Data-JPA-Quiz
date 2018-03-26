@@ -1,7 +1,7 @@
-package com.example.employeeapi.controller;
+package com.example.employee.controller;
 
-import com.example.employeeapi.datasource.EmployeeRepository;
-import com.example.employeeapi.model.Employee;
+import com.example.employee.datasource.EmployeeRepository;
+import com.example.employee.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,12 +1,25 @@
-package com.example.employeeapi.model;
+package com.example.employee.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
+@Entity
 public class Employee {
+    @Id
+    @GeneratedValue
     private long id;
+
+    @NotNull
     private String name;
+
+    @NotNull
     private Integer age;
+
+    @NotNull
     private String gender;
 
     public Employee() { }

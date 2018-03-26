@@ -1,7 +1,7 @@
-package com.example.employeeapi.datasource;
+package com.example.employee.datasource;
 
-import com.example.employeeapi.datasource.provider.EmployeeDataProvider;
-import com.example.employeeapi.model.Employee;
+import com.example.employee.datasource.provider.EmployeeDataProvider;
+import com.example.employee.entity.Employee;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
