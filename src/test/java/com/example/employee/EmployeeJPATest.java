@@ -12,7 +12,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace.NONE;
@@ -65,4 +68,37 @@ public class EmployeeJPATest {
         assertThat(EmployeePage.getTotalPages()).isEqualTo(3);
     }
 
+    @Test
+    public void should_return_company_name_when_input_employee_name() throws Exception {
+        //5.查找xiaohong的所在的公司的公司名称
+        String expectedCompanyName = "alibaba";
+        String actualCompanyName = employeeRepository.findCompanyNameByEmployeeName("xiaohong");
+        assertThat(actualCompanyName).isEqualTo(expectedCompanyName);
+    }
+
+    @Test
+    public void should_return_influence_lines_when_update_employee_name() throws Exception {
+        //6.将xiaohong的名字改成xiaobai,输出这次修改影响的行数
+        Integer expectedLine = 1;
+        Integer actualLine = employeeRepository.updateName("xiaohong","xiaobai");
+        assertThat(actualLine).isEqualTo(expectedLine);
+    }
+
+    @Test
+    public void should_deleted_employee_when_given_employee_name() throws Exception {
+        //7.删除姓名是xiaohong的employee
+        Employee expectedEmployee = new Employee("xiaohong",19,"female",7000,1, 1);
+        employeeRepository.deleteByName("xiaohong");
+        Employee actualEmployee = employeeRepository.findFirstByName("xiaohong");
+        assertThat(actualEmployee).isNull();
+    }
+
+    @Test
+    public void should_insert_employee_when_given_new_employee() throws Exception {
+        //7.删除姓名是xiaohong的employee
+        Employee expectedEmployee = new Employee("xiaohong",19,"female",7000,1, 1);
+        employeeRepository.deleteByName("xiaohong");
+        Employee actualEmployee = employeeRepository.findFirstByName("xiaohong");
+        assertThat(actualEmployee).isNull();
+    }
 }
