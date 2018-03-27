@@ -1,4 +1,4 @@
-# Spring Boot基础
+# Spring Data JPA基础
 
 ## 练习描述
 - 使用Spring boot来完成一个关于Employee的API接口
