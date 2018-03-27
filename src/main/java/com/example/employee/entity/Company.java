@@ -18,11 +18,6 @@ public class Company {
     @Column(name = "employeesNumber")
     private Integer employeesNumber;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    //可以执行所有的级联操作
-    @JoinColumn(name = "companyId")
-    private List<Employee> employees;
-
     public Integer getId() {
         return id;
     }
@@ -45,23 +40,5 @@ public class Company {
 
     public void setEmployeesNumber(Integer employeesNumber) {
         this.employeesNumber = employeesNumber;
-    }
-
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
-    }
-
-    @Override
-    public String toString() {
-        return "Company{" +
-                "id=" + id +
-                ", companyName='" + companyName + '\'' +
-                ", employeesNumber=" + employeesNumber +
-                ", employees=" + employees +
-                '}';
     }
 }

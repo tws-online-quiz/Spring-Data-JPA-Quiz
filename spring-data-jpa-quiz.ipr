@@ -25,8 +25,8 @@
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.0.0.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:2.0.5.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-orm:5.0.4.RELEASE" />
-            <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.0.4.RELEASE" />
             <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.45" />
+            <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.0.4.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.0.0.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.0.0.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:2.0.0.RELEASE" />
@@ -48,16 +48,21 @@
             <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-to-slf4j:2.10.0" />
             <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.25" />
             <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+            <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.0.0.RELEASE" />
             <element id="library" level="project" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.7.Final" />
             <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:5.2.14.Final" />
             <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-aspects:5.0.4.RELEASE" />
             <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.0.4.RELEASE" />
+            <element id="library" level="project" name="Gradle: javax.annotation:javax.annotation-api:1.3.2" />
             <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.19" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.4" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.4" />
             <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.4" />
+            <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.28" />
+            <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:8.5.28" />
+            <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:8.5.28" />
             <element id="library" level="project" name="Gradle: javax.validation:validation-api:2.0.1.Final" />
             <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
             <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.2.Final" />

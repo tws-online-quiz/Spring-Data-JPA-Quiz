@@ -11,7 +11,7 @@ import java.util.Map;
 public class Employee {
     @Id
     @GeneratedValue
-    private long id;
+    private Integer id;
 
     @NotNull
     private String name;
@@ -22,20 +22,45 @@ public class Employee {
     @NotNull
     private String gender;
 
-    public Employee() { }
+    @NotNull
+    private Integer salary;
 
-    public Employee(long id, String name, Integer age, String gender) {
-        this.id = id;
+    @NotNull
+    private Integer companyId;
+
+    public Employee(String name, Integer age, String gender, Integer salary, Integer companyId) {
         this.name = name;
         this.age = age;
         this.gender = gender;
+        this.salary = salary;
+        this.companyId = companyId;
+    }
+
+    public Employee(String name, Integer age, String gender, Integer salary, Integer companyId, Integer id) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.salary = salary;
+        this.companyId = companyId;
+        this.id = id;
+    }
+
+    public Employee() {
+    }
+
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
     }
 
     public long getId() {
         return id;
     }
 
-    public Employee setId(long id) {
+    public Employee setId(Integer id) {
         this.id = id;
         return this;
     }
@@ -65,15 +90,5 @@ public class Employee {
     public Employee setGender(String gender) {
         this.gender = gender;
         return this;
-    }
-
-    @Override
-    public String toString() {
-        Map<String, Object> map = new HashMap<>();
-        map.put("id", this.id);
-        map.put("name", this.name);
-        map.put("age", this.age);
-        map.put("gender", this.gender);
-        return map.toString();
     }
 }
