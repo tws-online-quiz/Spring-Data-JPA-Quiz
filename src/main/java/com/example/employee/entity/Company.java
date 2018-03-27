@@ -2,7 +2,6 @@ package com.example.employee.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Entity
 public class Company {
