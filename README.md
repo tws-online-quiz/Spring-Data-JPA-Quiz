@@ -1,62 +1,24 @@
-# Spring Data JPA基础
+# Spring Data JPA
 
 ## 练习描述
-- 使用Spring boot来完成一个关于Employee的API接口
-- 至少需要完成对所有Employee的一个Get请求,返回一个包含所有Employee的JSON,接口路径范例：`http://localhost:8080/employee`
-- 有余力的同学可以尝试完成对Employee的`CURD(增删改查)`全部接口
+- 学习如何在已有的 `Spring Boot` 项目基础上，添加 `Spring Data JPA` 完成对数据库的各种操作
+- 学习使用 `Spring Data JPA` 来操作实体对象，执行对MySQL的 `CRUD (增删改查)` 操作
+- 学习使用 `Flyway` 对数据库做版本控制
 
-## 环境描述 
+## 环境要求
 - java8
 - spring-boot
 - Intellij-IDEA
+- MySQL
 
 ## 如何开始
-- 使用如下方式建立Spring boot项目
-  - 从`http://start.spring.io/`生成一个项目包，并下载下来，解压，开始编码
-- 使用`./gradlew bootRun`来启动服务器
+- 本地安装MySQL数据库，并启动 `MySQL Service` 
+- 搭建数据库`employee_db`
+- 使用已有的 `Spring Boot` 项目作为 `code base`
+- 在项目中添加 `Spring Data JPA` 以及 `Flyway Core` 等依赖
+- 并将数据库 `url name password` 配置到项目中
+- 执行 `./gradlew test` ，测试都失败
 
 ## 输出规范
-- 仔细阅读上面的练习描述，完成作业
-- 运行项目，启动服务器
-- 使用`Postman`来向目标URL发送请求，获取Response，Response JSON格式如下:
-```json
-[
-  {
-    "id": 0,
-    "name": "小明",
-    "age": 20,
-    "gender": "男"
-  },
-  {
-    "id": 1,
-    "name": "小红",
-    "age": 19,
-    "gender": "女"  
-  },
-  {
-    "id": 2,
-    "name": "小智",
-    "age": 15,
-    "gender": "男"
-  },
-  {
-    "id": 3,
-    "name": "小刚",
-    "age": 16,
-    "gender": "男"
-  },
-  {
-    "id": 4,
-    "name": "小霞",
-    "age": 15,
-    "gender": "女"
-  }
-]
-```
-- 截图，并将图片存放在项目根目录下，截图命名为`result.png`，图片中Response中的Employee必须包括你自己的名字，例如：
-![](https://raw.githubusercontent.com/tws-online-quiz/spring-boot-quiz/master/example.png)
-    
-## 题目要求
-- 至少完成`Get`请求
-- 代码通过小步提交，并且每次提交的描述都要有意义
-- 使用快捷键编码
+- 仔细阅读 `src/test/java/EmployeeJPATest` 中的需求描述，并在 `src/main/java/repository` 中将实现补全 
+- 执行 `./gradlew test`，出现`BUILD SUCCESS`，即完成题目
