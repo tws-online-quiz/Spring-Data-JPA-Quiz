@@ -12,12 +12,13 @@
 - MySQL
 
 ## 如何开始
-- 本地安装MySQL数据库，并启动 `MySQL Service` 
+- 在命令行中使用以下命令在用户本地任意目录下clone此题目库
+- 本地启动 `MySQL Service` 
 - 搭建数据库`employee_db`
-- 使用已有的 `Spring Boot` 项目作为 `code base`
-- 在项目中添加 `Spring Data JPA` 以及 `Flyway Core` 等依赖
-- 并将数据库 `url name password` 配置到项目中
-- 执行 `./gradlew test` ，测试都失败
+- 在`build.gradle`中添加 `Spring Data JPA` 以及 `Flyway Core` 等依赖
+- 并将数据库的 `url username password` 配置到项目中
+- 执行 `./gradlew test` ，此时测试都是失败的
+- 开始按照题目要求完成练习
 
 ## 输出规范
 - 仔细阅读 `src/test/java/EmployeeJPATest` 中的需求描述，并在 `src/main/java/repository` 中将实现补全 
