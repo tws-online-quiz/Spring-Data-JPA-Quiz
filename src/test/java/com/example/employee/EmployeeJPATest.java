@@ -92,13 +92,4 @@ public class EmployeeJPATest {
         Employee actualEmployee = employeeRepository.findFirstByName("xiaohong");
         assertThat(actualEmployee).isNull();
     }
-
-    @Test
-    public void should_insert_employee_when_given_new_employee() throws Exception {
-        //7.删除姓名是xiaohong的employee
-        Employee expectedEmployee = new Employee("xiaohong",19,"female",7000,1, 1);
-        employeeRepository.deleteByName("xiaohong");
-        Employee actualEmployee = employeeRepository.findFirstByName("xiaohong");
-        assertThat(actualEmployee).isNull();
-    }
 }
