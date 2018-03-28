@@ -23,7 +23,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("select e.name from Employee e where e.salary=(select max(t.salary) from Employee t where t.companyId=?1)")
     String findEmployee(Integer companyId);
 
-    //4.实现对Employee的分页查询，每页一个数据
+    //4.实现对Employee的分页查询，每页两条数据
     Page<Employee> findAll(Pageable pageable);
 
     //5.查找**的所在的公司的公司名称

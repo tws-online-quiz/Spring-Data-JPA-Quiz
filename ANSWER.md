@@ -6,7 +6,7 @@
 ### 如何启动
 - 解压 `answer.zip`，用 IntelliJ IDE 打开
 - 首先本地启动`MySQL server`
-- 将本地启动的 `MySQL url` 以及用户名和密码配置到项目中
+- 将本地`MySQL`的 `url,username,password` 配置到项目的 `application.yml` 以及 `test/` 里的文件中
 - 项目根目录下运行 `./gradlew test`，所有测试均可通过
 
 ### 重点讲解
