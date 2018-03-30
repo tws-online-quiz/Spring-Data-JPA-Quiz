@@ -1,0 +1,20 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: springDataJpaQuiz
+    ports:
+      - 3306:3306
+    environment:
+      - LANG=C.UTF-8
+      - TERM=dumb
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=employee_db
+      - MYSQL_PASSWORD=123456
+      - MYSQL_USER=springDataJpaQuiz
+    networks:
+       main:
+        aliases:
+          - springDataJpaQuiz
+networks:
+  main:
