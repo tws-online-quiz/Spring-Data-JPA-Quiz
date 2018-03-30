@@ -1,10 +1,10 @@
-CREATE TABLE employee_db.Company(
+CREATE TABLE Company(
     id INT PRIMARY KEY,
     companyName VARCHAR(255) NOT NULL,
     employeesNumber INT NOT NULL
 ) engine=InnoDB DEFAULT CHARSET = gbk;
 
-CREATE TABLE employee_db.Employee(
+CREATE TABLE Employee(
     id INT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     age INT NOT NULL,
