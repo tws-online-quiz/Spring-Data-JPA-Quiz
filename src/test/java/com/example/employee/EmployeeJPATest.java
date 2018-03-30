@@ -30,7 +30,7 @@ public class EmployeeJPATest {
     @Before
     public void setUp() throws Exception {
         Flyway flyway = new Flyway();
-        flyway.setDataSource("jdbc:mysql://localhost:3306/employee_db","root","1234");
+        flyway.setDataSource("jdbc:mysql://localhost:3306/employee_db","root","");
         flyway.clean();
         flyway.migrate();
     }
