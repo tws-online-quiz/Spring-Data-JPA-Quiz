@@ -30,7 +30,7 @@ public class EmployeeJPATest {
     @Before
     public void setUp() throws Exception {
         Flyway flyway = new Flyway();
-        flyway.setDataSource("jdbc:mysql://localhost:3306/employee_db","springDataJpaQuiz","123456");
+        flyway.setDataSource("jdbc:mysql://localhost:3306/employee_db","root","1234");
         flyway.clean();
         flyway.migrate();
     }
