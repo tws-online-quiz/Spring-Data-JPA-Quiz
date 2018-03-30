@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 service mysql start
-mysql -uroot -proot
-create database employee_db;
-show databases;
-exit;
+mysql -uroot -proot -e "source ./database.sql"
 ./gradlew test
