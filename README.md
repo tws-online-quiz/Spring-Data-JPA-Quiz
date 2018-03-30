@@ -20,7 +20,7 @@
 - 开始按照题目要求创建`entity`，完成实现和测试
 
 #### note:
-请不要修改项目中mysql的用户名和密码，否则测试不通过！
+- 请不要修改项目中mysql的用户名和密码，否则测试不通过！
 ## 输出规范
 - 仔细阅读 `src/test/java/EmployeeJPATest` 中的需求描述，并在 `src/main/java/repository` 中将实现补全 
 - 执行 `./gradlew test`，出现`BUILD SUCCESS`，即完成题目
