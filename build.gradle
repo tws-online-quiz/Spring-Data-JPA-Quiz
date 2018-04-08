@@ -24,6 +24,7 @@ repositories {
     maven {
         url "http://ec2-54-222-235-15.cn-north-1.compute.amazonaws.com.cn:8081/repository/maven-central/"
     }
+    mavenCentral()      
 }
 
 configurations {
